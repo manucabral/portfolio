@@ -1,0 +1,59 @@
+@import './variables';
+
+html {
+    box-sizing: border-box;
+    height: 100vh;
+    &*,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100%;
+        font-family: $fontFamily;
+        background-color: $dark;
+        color: $white;
+        font-size: 16px;
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .intermediate {
+            margin-top: 20px;
+        }
+        .loading {
+            margin-top: 100px;
+            border: 20px solid $white;
+            border-radius: 50%;
+            border-top: 20px solid $moredark;
+            width: 50px;
+            height: 50px;
+            animation: spinner 2s linear infinite;
+        }
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@import './components/navbar';
+@import './components/separator';
+@import './components/profile';
+@import './components/about';
+@import './components/projects';
+@import './components/list';
+@import './components/item';
+@import './components/icon';
+@import './components/contact';
+@import './components/footer';

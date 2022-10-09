@@ -1,0 +1,40 @@
+.list-section {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    .ul-normal {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .ul-card {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .list-section {
+        .ul-card {
+            width: 90%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.separator-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+    max-width: $maxWidth;
+    width: 100%;
+    padding-bottom: 20px;
+    .reference {
+        position: relative;
+        top: -50px;
+    }
+    .separator-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        height: 100%;
+        width: 100%;
+        .separator__title {
+            font-size: 1.6rem;
+            color: $gray;
+        }
+    }
+    .separator-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 150px) and (max-width: 720px) {
+    .separator-section {
+        flex-direction: column;
+        .reference {
+            top: 0;
+        }
+        .separator-header {
+            width: 90%;
+            text-align: left;
+        }
+    }
+}

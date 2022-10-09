@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .footer__text {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: $gray;
+        a {
+            color: $violet;
+            text-decoration: none;
+        }
+    }
+}

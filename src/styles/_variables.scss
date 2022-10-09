@@ -1,0 +1,14 @@
+$fontFamily: Outfit, 'Segoe UI', Roboto;
+$moredark: #1a1a1a;
+$dark: #141b21;
+$gray: #9197ae;
+$white: #eff6ee;
+$violet: #9381ff;
+
+$maxWidth: 800px;
+
+@font-face {
+    src: local('./src/fonts/outfit-regular.woff2') format('truetype');
+    font-family: $fontFamily;
+    font-weight: 300;
+}
