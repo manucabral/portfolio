@@ -9,7 +9,6 @@ export const useGithub = (token, include) => {
     const { detectIcon } = useIcon()
 
     const headers = {
-        Authorization: `token ${token}`,
         Accept: 'application/vnd.github.v3+json',
     }
 
@@ -18,6 +17,9 @@ export const useGithub = (token, include) => {
      * @param {string} username - The GitHub username.
      */
     const fetchRepos = async (username) => {
+        if (token) {
+            headers.Authorization = `token ${token}`
+        }
         setLoading(true)
         let repos = []
         for (let i = 0; i < include.length; i++) {
