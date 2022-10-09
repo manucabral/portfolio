@@ -9,7 +9,7 @@ export const useGithub = (token, include) => {
     const { detectIcon } = useIcon()
 
     const headers = {
-        Accept: 'application/vnd.github.v3+json',
+        Authorization: `token ${token}`,
     }
 
     /**
@@ -17,15 +17,11 @@ export const useGithub = (token, include) => {
      * @param {string} username - The GitHub username.
      */
     const fetchRepos = async (username) => {
-        if (token) {
-            headers.Authorization = `token ${token}`
-        }
         setLoading(true)
         let repos = []
         for (let i = 0; i < include.length; i++) {
             const response = await axios.get(
-                `https://api.github.com/repos/${username}/${include[i]}`,
-                { headers }
+                `https://api.github.com/repos/${username}/${include[i]}`
             )
             let repo = response.data
             repo['langs'] = await fetchLangs(username, repo.name)
@@ -52,8 +48,7 @@ export const useGithub = (token, include) => {
      */
     const fetchLangs = async (username, repo) => {
         const response = await axios.get(
-            `https://api.github.com/repos/${username}/${repo}/languages`,
-            { headers }
+            `https://api.github.com/repos/${username}/${repo}/languages`
         )
         let langs = response.data,
             array = []
