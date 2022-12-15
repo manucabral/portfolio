@@ -11,7 +11,7 @@ export default function Profile() {
             <div className="profile-right">
                 <h1 className="profile-right__title">Manuel Andrés Cabral</h1>
                 <h2 className="profile-right__subtitle">
-                    💻 Python and Backend Developer
+                    💻 Backend Developer
                 </h2>
             </div>
         </div>
